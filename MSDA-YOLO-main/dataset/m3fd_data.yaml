@@ -1,0 +1,24 @@
+# M3FD多模态数据集配置文件
+# 多模态目标检测数据集 - RGB + 红外
+
+# 数据集路径（相对于当前 YAML 文件）
+train: M3FD/images/train  # 训练集RGB图像路径
+val: M3FD/images/val      # 验证集RGB图像路径
+test: M3FD/images/test    # 测试集RGB图像路径
+
+# 多模态路径配置
+modalities:
+  rgb: images      # RGB可见光图像模态路径
+  ir: images_ir       # 红外图像模态路径
+
+# 当前使用的模态组合
+models: ['rgb','ir']  # 本次训练使用的模态：RGB + 红外
+
+# 类别信息 
+names:
+  0: Car
+  1: Truck
+  2: People
+  3: Motorcycle
+  4: Lamp
+  5: Bus
